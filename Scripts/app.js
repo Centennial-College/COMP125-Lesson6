@@ -78,6 +78,38 @@
     function About() {
         InitialText();
 
+        window.setTimeout(function () {
+            alert('hello world after 3 seconds')
+        }, 3000)
+
+        var timer = 0;
+
+        var myTimer = window.setInterval(function () {
+            timer++;
+            console.log(timer)
+            if (timer > 10) {
+                console.log('we should stop now')
+                clearInterval(myTimer)
+            }
+        }, 1000)
+
+        // window.alert("NEVER use alerts. they are annoying")
+
+        // if (window.confirm('Are you sure you want to give away senstive info?')) {
+
+        //     console.log('InnerWidth: ' + window.innerWidth)
+        //     console.log('InnerHeight: ' + window.innerHeight)
+
+        //     console.log('OuterWidth: ' + window.outerWidth)
+        //     console.log('OuterHeight: ' + window.outerHeight)
+
+        //     console.log('Location: ' + window.location)
+
+        //     var name = window.prompt('Enter your name: ')
+        //     console.log('your name is ' + name)
+        // }
+
+
     }
 
     /**
